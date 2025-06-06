@@ -35,6 +35,20 @@ to add more drives run `sudo mergerfs -o defaults,allow_other,use_ino,category.c
 verify and then add `/mnt/disk1:/mnt/disk2:/mnt/disk3 /mnt/pool fuse.mergerfs defaults,allow_other,use_ino,category.create=mfs 0 0` to fstab `sudo nano /etc/fstab`.
 
 ## Network Share
-FHF-NAS is using a SAMBA SMB networkshare on /mnt/pool
+FHF-NAS is using a SAMBA SMB networkshare on `/mnt/pool/smb` and `/mnt/share/smb`,
 
-TODO: pool drives, make pool accesible over the network, make files in pool accesible on mobile, make NAS accesible for managed devices via Zero Trust
+it is structured into `Main` and `Share`. 
+
+`Main` is the multiple TB big Array of SnapRAID drives, 
+it has some data parity and is protected against loss of one drive.
+It contains the folder `FinishedProjects`, which is considered for backups, and the `Archive`, which will not be backed-up.
+Anything which can not be lost, should be in `Main/FinishedProjects`.
+
+`Share` is some GBs from the NVMe Drive. It should be used for quick file sharing or storage of small and non-importaint files.
+It has no parity and is not regularly backed-up.
+
+### Connecting to the Networkshare
+To Connect to the networkshare under windows, simply type `\\fhfnas` in the file explorer and enter the username and password told to you.
+It is also recommended to add the networkshare to your system overview, by clicking on `This PC` on the sidebar and then rightclicking onto the background of the opened path and selecting `Add Network Adress`
+
+TODO: make files in pool accesible on mobile, make NAS accesible for managed devices via Zero Trust
