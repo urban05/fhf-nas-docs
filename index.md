@@ -22,5 +22,8 @@ SnapRAID all in one script used ([https://github.com/auanasgheps/snapraid-aio-sc
 found at `~/scripts/snapraid-aio-script-3.4-beta3/snapraid-aio-script.sh`, 
 
 config in the same dir,
-should send discord and email notification,
-TODO: Test mailx, verify spindown of drives when idle, add cronjob for script, pool drives, make pool accesible over the network, make files in pool accesible on mobile, make NAS accesible for managed devices via Zero Trust
+should send discord and email notification (latter currently not working).
+
+Cronjob configured in roots crontab to run script every day at 8AM.
+
+TODO: pool drives, make pool accesible over the network, make files in pool accesible on mobile, make NAS accesible for managed devices via Zero Trust
