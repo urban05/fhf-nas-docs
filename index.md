@@ -26,4 +26,15 @@ should send discord and email notification (latter currently not working).
 
 Cronjob configured in roots crontab to run script every day at 8AM.
 
+### Pooling
+SnapRAID is pooled using mergerFS,
+
+to add more drives run `sudo mergerfs -o defaults,allow_other,use_ino,category.create=mfs /mnt/disk1:/mnt/disk2:/mnt/disk3 /mnt/pool
+`,
+
+verify and then add `/mnt/disk1:/mnt/disk2:/mnt/disk3 /mnt/pool fuse.mergerfs defaults,allow_other,use_ino,category.create=mfs 0 0` to fstab `sudo nano /etc/fstab`.
+
+## Network Share
+FHF-NAS is using a SAMBA SMB networkshare on /mnt/pool
+
 TODO: pool drives, make pool accesible over the network, make files in pool accesible on mobile, make NAS accesible for managed devices via Zero Trust
