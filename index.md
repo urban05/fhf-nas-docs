@@ -44,7 +44,7 @@ it has some data parity and is protected against loss of one drive.
 It contains the folder `FinishedProjects`, which is considered for backups, and the `Archive`, which will not be backed-up.
 Anything which can not be lost, should be in `Main/FinishedProjects`.
 
-`Share` is some GBs from the NVMe Drive. It should be used for quick file sharing or storage of small and non-importaint files.
+`Share` is some GBs from the NVMe Drive. It should be used for quick file sharing or storage of small and non-important files.
 It has no parity and is not regularly backed-up.
 
 ### Connecting to the Networkshare
