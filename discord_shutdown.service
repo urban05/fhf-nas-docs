@@ -1,7 +1,8 @@
 [Unit]
-Description=Send Discord notification on shutdown or reboot
 DefaultDependencies=no
-Before=shutdown.target reboot.target halt.target
+Before=network.target shutdown.target reboot.target halt.target
+Requires=network-online.target
+After=network-online.target
 
 [Service]
 Type=oneshot
