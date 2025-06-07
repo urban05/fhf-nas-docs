@@ -49,6 +49,13 @@ It has no parity and is not regularly backed-up.
 
 ### Connecting to the Networkshare
 To Connect to the networkshare under windows, simply type `\\fhfnas` in the file explorer and enter the username and password told to you.
-It is also recommended to add the networkshare to your system overview, by clicking on `This PC` on the sidebar and then rightclicking onto the background of the opened path and selecting `Add Network Adress`
+It is also recommended to add the networkshare to your system overview, by clicking on `This PC` on the sidebar and then right-clicking onto the background of the opened path and selecting `Add Network Adress`
+
+## Notifications
+FHF-NAS is sending notifications on a Discord Webhook on multiple events.
+
+`~/scripts/snapraid-aio-script-3.4-beta3/snapraid-aio-script.sh` sends one on run with details.
+when booting, rebooting, shutting down or halting  `~/scripts/discord-notify/discord_notify.sh` sends notification using the services `/etc/systemd/system/discord_startup.service`  and `/etc/systemd/system/discord_shutdown.service`.
+
 
 TODO: make files in pool accesible on mobile, make NAS accesible for managed devices via Zero Trust
