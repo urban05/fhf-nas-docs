@@ -1,0 +1,9 @@
+[sshd]
+enabled = true
+port = ssh
+filter = sshd
+backend = systemd
+logpath = _SYSTEMD_UNIT=ssh.service
+maxretry = 3
+bantime = 600
+action = iptables[name=SSH, port=ssh, protocol=tcp]
