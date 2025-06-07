@@ -1,0 +1,36 @@
+[cm5]
+# USB aktivieren
+dtoverlay=dwc2,dr_mode=host
+
+# PCIe aktivieren (Slot 1)
+dtparam=pciex1
+dtparam=pciex1_gen=3
+otg_mode=1
+
+# Optional: Für inkompatible SSDs
+#dtoverlay=pcie-32bit-dma
+dtparam=pciex1_gen=3
+
+
+# Always spinning slowly
+dtparam=fan_temp0=10000,fan_temp0_hyst=5000,fan_temp0_speed=120
+
+# Mid temp — steady step up
+dtparam=fan_temp1=60000,fan_temp1_hyst=5000,fan_temp1_speed=150
+
+# Hot — high performance
+dtparam=fan_temp2=70000,fan_temp2_hyst=5000,fan_temp2_speed=180
+dtparam=fan_temp3=80000,fan_temp3_hyst=5000,fan_temp3_speed=255
+
+
+[all]
+#USB Debug Messages
+BOOT_UART=1
+#Reduced Shutdown Power usage
+POWER_OFF_ON_HALT=1
+
+# Disable Bluetooth
+dtoverlay=disable-bt
+ 
+# Disable WiFi
+dtoverlay=disable-wifi
