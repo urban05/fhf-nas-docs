@@ -1,0 +1,10 @@
+[Unit]
+Description=Send Discord notification on startup
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/fhfnas/scripts/discord-notify/discord_notify.sh "FHFnas started up."
+
+[Install]
+WantedBy=multi-user.target
