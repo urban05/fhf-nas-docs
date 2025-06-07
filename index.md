@@ -48,8 +48,8 @@ Anything which can not be lost, should be in `Main/FinishedProjects`.
 It has no parity and is not regularly backed-up.
 
 ### Connecting to the Networkshare
-To Connect to the networkshare under windows, simply type `\\fhfnas` in the file explorer and enter the username and password told to you.
-It is also recommended to add the networkshare to your system overview, by clicking on `This PC` on the sidebar and then right-clicking onto the background of the opened path and selecting `Add Network Adress`
+To Connect to the networkshare under windows, simply connect to the Zero Trust Network and type `\\192.168.0.48` in the file explorer and enter the username and password told to you.
+It is also recommended to add the networkshare to your system overview, by right-clicking on the two folders shown to you under `\\192.168.0.48` and selecting `connect network share`
 
 ## Notifications
 FHF-NAS is sending notifications on a Discord Webhook on multiple events.
