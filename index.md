@@ -34,6 +34,9 @@ to add more drives run `sudo mergerfs -o defaults,allow_other,use_ino,category.c
 
 verify and then add `/mnt/disk1:/mnt/disk2:/mnt/disk3 /mnt/pool fuse.mergerfs defaults,allow_other,use_ino,category.create=mfs 0 0` to fstab `sudo nano /etc/fstab`.
 
+## Groups
+The useres `fhfnas` and `www-data` are in the group `smb`, the group owns the `smb` folders for the networkshare
+
 ## Network Share
 FHF-NAS is using a SAMBA SMB networkshare on `/mnt/pool/smb` and `/FHFshare/smb`,
 
