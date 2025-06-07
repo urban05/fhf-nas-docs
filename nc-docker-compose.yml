@@ -7,16 +7,16 @@ services:
     volumes:
       - db:/var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD: [PASSWD]
-      MYSQL_PASSWORD: [PASSWD]
+      MYSQL_ROOT_PASSWORD: PASSWD
+      MYSQL_PASSWORD: PASSWD
       MYSQL_DATABASE: nextcloud
       MYSQL_USER: nextcloud
 
   app:
-    image: nextcloud
+    build: .
     restart: always
     environment:
-      MYSQL_PASSWORD: [PASSWD]
+      MYSQL_PASSWORD: PASSWD
       MYSQL_DATABASE: nextcloud
       MYSQL_USER: nextcloud
       MYSQL_HOST: db
