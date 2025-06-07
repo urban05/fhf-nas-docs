@@ -54,6 +54,9 @@ It has no parity and is not regularly backed-up.
 To Connect to the networkshare under windows, simply connect to the Zero Trust Network and type `\\192.168.0.48` in the file explorer and enter the username and password told to you.
 It is also recommended to add the networkshare to your system overview, by right-clicking on the two folders shown to you under `\\192.168.0.48` and selecting `connect network share`
 
+## Nextcloud
+For access over a mobile device a nextcloud instance is running inside a docker container, created using `nc-docker-compose.yaml`. Ensure that your device is connected to the ZeroTrust Network and use the provided QR Code to log into the app.
+
 ## Notifications
 FHF-NAS is sending notifications on a Discord Webhook on multiple events.
 
