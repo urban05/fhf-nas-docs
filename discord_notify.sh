@@ -4,5 +4,5 @@ MESSAGE=$1
 
 curl -H "Content-Type: application/json" \
      -X POST \
-     -d "{\"content\": \"$MESSAGE\"}" \
+     -d "{\"content\": \"$TIMESTAMP — $MESSAGE\"}" \
      $WEBHOOK_URL
