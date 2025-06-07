@@ -22,7 +22,7 @@ SnapRAID all in one script used ([https://github.com/auanasgheps/snapraid-aio-sc
 found at `~/scripts/snapraid-aio-script-3.4-beta3/snapraid-aio-script.sh`, 
 
 config in the same dir,
-should send discord and email notification (latter currently not working).
+should send discord notification.
 
 Cronjob configured in roots crontab to run script every day at 8AM.
 
