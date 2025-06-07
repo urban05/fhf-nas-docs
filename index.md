@@ -35,7 +35,7 @@ to add more drives run `sudo mergerfs -o defaults,allow_other,use_ino,category.c
 verify and then add `/mnt/disk1:/mnt/disk2:/mnt/disk3 /mnt/pool fuse.mergerfs defaults,allow_other,use_ino,category.create=mfs 0 0` to fstab `sudo nano /etc/fstab`.
 
 ## Network Share
-FHF-NAS is using a SAMBA SMB networkshare on `/mnt/pool/smb` and `/mnt/share/smb`,
+FHF-NAS is using a SAMBA SMB networkshare on `/mnt/pool/smb` and `/FHFshare/smb`,
 
 it is structured into `Main` and `Share`. 
 
