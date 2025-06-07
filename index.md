@@ -56,8 +56,8 @@ FHF-NAS is sending notifications on a Discord Webhook on multiple events.
 
 `~/scripts/snapraid-aio-script-3.4-beta3/snapraid-aio-script.sh` sends one on run with details.
 when booting, rebooting, shutting down or halting  `~/scripts/discord-notify/discord_notify.sh` sends notification using the services `/etc/systemd/system/discord_startup.service`  and `/etc/systemd/system/discord_shutdown.service`,
-when an SSH connection is established, sends notification,
-when SSH login fails, sends notification.
+when an SSH session is started and stopped, sends notification with tail of `/etc/bash.bashrc`,
+when SSH login fails, sends notification from fail2ban.
 
 
 TODO: make files in pool accesible on mobile, make NAS accesible for managed devices via Zero Trust
