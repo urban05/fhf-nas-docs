@@ -55,7 +55,9 @@ It is also recommended to add the networkshare to your system overview, by click
 FHF-NAS is sending notifications on a Discord Webhook on multiple events.
 
 `~/scripts/snapraid-aio-script-3.4-beta3/snapraid-aio-script.sh` sends one on run with details.
-when booting, rebooting, shutting down or halting  `~/scripts/discord-notify/discord_notify.sh` sends notification using the services `/etc/systemd/system/discord_startup.service`  and `/etc/systemd/system/discord_shutdown.service`.
+when booting, rebooting, shutting down or halting  `~/scripts/discord-notify/discord_notify.sh` sends notification using the services `/etc/systemd/system/discord_startup.service`  and `/etc/systemd/system/discord_shutdown.service`,
+when an SSH connection is established, sends notification,
+when SSH login fails, sends notification.
 
 
 TODO: make files in pool accesible on mobile, make NAS accesible for managed devices via Zero Trust
