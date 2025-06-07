@@ -1,0 +1,11 @@
+[Unit]
+Description=Send Discord notification on shutdown or reboot
+DefaultDependencies=no
+Before=shutdown.target reboot.target halt.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/fhfnas/scripts/discord-notify/discord_notify.sh "FHFnas started up."
+
+[Install]
+WantedBy=halt.target reboot.target shutdown.target
